@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class JobController extends Controller
+{
+    public function index()
+    {
+        return view ('jobs.index');
+    }
+
+    public function detail()
+    {
+        return view ('jobs.detail');
+    }
+}
