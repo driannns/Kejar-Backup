@@ -15,29 +15,16 @@
         <!-- Scripts -->
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700&display=swap');
-
         * {
             font-family: 'Poppins', sans-serif;
         }
-
     </style>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased">
-        <div class="bg-white">
+    <body class="font-sans antialiased h-screen">
+        <div class="bg-white" style="height: 12vh;">
             @include('layouts.navigation')
-
-            <!-- Page Heading
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif -->
-
-            <!-- Page Content -->
-            <main>
+            <main style="height: 70vh">
                 {{ $slot }}
             </main>
         </div>

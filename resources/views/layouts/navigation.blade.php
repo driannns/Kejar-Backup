@@ -1,12 +1,12 @@
-                                <style>
-                                    a[aria-current="page"]{
-                                        color:#FF6B2C;
-                                    }
-                                </style>
+<style>
+        a[aria-current="page"]{
+            color:#FF6B2C;
+        }
+</style>
 <body>
     <!-- NAVBAR -->
-    <nav class="w-full h-[88px] border text-[16px]">
-        <div class="flex h-[88px] justify-between items-center mx-10">
+    <nav class="w-full h-full  flex justify-between text-[16px] items-center">
+        <div class="w-full flex justify-between items-center mx-10">
             <div class="">
                 <a href="/"><img src="/asset/logo.png" alt="" width="99px"></a>
             </div>
@@ -42,7 +42,7 @@
                             </button>
                         </x-slot>
 
-                        <x-slot name="content">
+                        <x-slot name="content" style="background-color: white;">
                             <x-dropdown-link :href="route('profile.edit')">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
@@ -59,21 +59,16 @@
                         </x-slot>
                     </x-dropdown>
                 </div>
-                <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-                    <!-- <div class="pt-2 pb-3 space-y-1">
-                        <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                            {{ __('Dashboard') }}
-                        </x-responsive-nav-link>
-                    </div> -->
+                <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden" style="background-color: white;">
         
                     <!-- Responsive Settings Options -->
-                    <div class="pt-4 pb-1 border-t border-gray-200">
+                    <div class="pt-4 pb-1 border-t border-gray-200" style="background-color: white;">
                         <div class="px-4">
                             <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                             <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
                         </div>
         
-                        <div class="mt-3 space-y-1">
+                        <div class="mt-3 space-y-1" style="background-color: white;">
                             <x-responsive-nav-link :href="route('profile.edit')">
                                 {{ __('Profile') }}
                             </x-responsive-nav-link>

@@ -1,9 +1,9 @@
 <x-app-layout>
-    <div class="w-full h-[519px]"
+    <div class="w-full h-full"
     style="background-image: url('asset/wallpaper.png'); background-size: cover; background-repeat: no-repeat;  background-size: 100%; background-color: rgb(0,0,0)">
-    <div class="w-full h-[519px]" style="background-color: rgba(0, 0, 0, 0.7)">
-        <div class="w-2/5 h-full py-14 px-16 text-white">
-            <div class="w-[362px] h-[320px] grid">
+    <div class="w-full h-full" style="background-color: rgba(0, 0, 0, 0.7)">
+        <div class="w-2/5 h-full py-14 pl-20 pr-44 text-white">
+            <div class="w-full h-4/5 grid">
                 <div class="">
                             <div class="w-72 h-fit">
                                 <h1 class="text-5xl font-bold leading-tight">Get Your Dream Job Today.</h1>
@@ -13,11 +13,11 @@
                                     on your interest ad study major</p>
                                 </div>
                             </div>
-                            <div class="flex w-full h-10 bg-white rounded-[16px]" id="search-bar">
-                                <div class="w-[294px] px-4" id="input-search">
-                                    <input class="focus:border-transparent focus:ring-0 border-0 text-gray-500" type="text" placeholder="Search your dream job...">
+                            <div class="flex w-full h-12 bg-white rounded-[16px]" id="search-bar">
+                                <div class="w-full px-4 flex items-center" id="input-search">
+                                    <input class="w-full focus:border-transparent focus:ring-0 border-0 text-gray-500" type="text" placeholder="Search your dream job...">
                                 </div>
-                                <div class="flex justify-center items-center w-[68px] bg-[#FF6B2C] rounded-r-2xl cursor-pointer"
+                                <div class="flex justify-center items-center w-1/5 bg-[#FF6B2C] rounded-r-2xl cursor-pointer"
                                 id="search-button">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:scale-110 transition">
@@ -36,10 +36,10 @@
         </div>
 
         <!-- CATEGORY -->
-        <div class="flex">
-            <div class="flex justify-between w-full h-[146px] bg-[#0D0140] text-white py-5 px-9">
+        <div class="flex absolute bottom-0 w-screen" style="height: 19vh">
+            <div class="flex justify-between w-full bg-[#0D0140] text-white py-5 px-9">
                 
-                <div class="grid place-items-center" id="database">
+                <div class="grid place-items-center cursor-pointer hover:scale-105 transition" id="database">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="white" class="w-12 h-12">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -49,7 +49,7 @@
                 <p class="font-light">1020 Job Offers</p>
             </div>
             
-            <div class="grid place-items-center" id="mobile">
+            <div class="grid place-items-center cursor-pointer hover:scale-105 transition" id="mobile">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="white" class="w-12 h-12">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -59,7 +59,7 @@
             <p>1020 Job Offers</p>
         </div>
         
-                <div class="grid place-items-center" id="webdev">
+                <div class="grid place-items-center cursor-pointer hover:scale-105 transition" id="webdev">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="white" class="w-12 h-12">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -69,7 +69,7 @@
                 <p class="font-light">1020 Job Offers</p>
             </div>
             
-            <div class="grid place-items-center" id="devops">
+            <div class="grid place-items-center cursor-pointer hover:scale-105 transition" id="devops">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="white" class="w-12 h-12">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -79,7 +79,7 @@
             <p class="font-light">1020 Job Offers</p>
         </div>
         
-        <div class="grid place-items-center" id="backend">
+        <div class="grid place-items-center cursor-pointer hover:scale-105 transition" id="backend">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="white" class="w-12 h-12">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -89,7 +89,7 @@
                     <p class="font-light">1020 Job Offers</p>
                 </div>
                 
-                <div class="grid place-items-center" id="dataanalyst">
+                <div class="grid place-items-center cursor-pointer hover:scale-105 transition" id="dataanalyst">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-12 h-12">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -103,17 +103,17 @@
         </div>
         
         <div class="grid place-items-center w-[390px] bg-[#FF6B2C] font-semibold text-white">
-            <div>
-                
+            <div class="mx-auto cursor-pointer hover:scale-105 transition">
+                <div class="mx-auto" style="width: 6.5vw">
+                    
                 <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"
-                class="w-12 h-12">
+                class="w-1 h-1">
                 <path
                 d="M21.721 12.752a9.711 9.711 0 00-.945-5.003 12.754 12.754 0 01-4.339 2.708 18.991 18.991 0 01-.214 4.772 17.165 17.165 0 005.498-2.477zM14.634 15.55a17.324 17.324 0 00.332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 00.332 4.647 17.385 17.385 0 005.268 0zM9.772 17.119a18.963 18.963 0 004.456 0A17.182 17.182 0 0112 21.724a17.18 17.18 0 01-2.228-4.605zM7.777 15.23a18.87 18.87 0 01-.214-4.774 12.753 12.753 0 01-4.34-2.708 9.711 9.711 0 00-.944 5.004 17.165 17.165 0 005.498 2.477zM21.356 14.752a9.765 9.765 0 01-7.478 6.817 18.64 18.64 0 001.988-4.718 18.627 18.627 0 005.49-2.098zM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 001.988 4.718 9.765 9.765 0 01-7.478-6.816zM13.878 2.43a9.755 9.755 0 016.116 3.986 11.267 11.267 0 01-3.746 2.504 18.63 18.63 0 00-2.37-6.49zM12 2.276a17.152 17.152 0 012.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0112 2.276zM10.122 2.43a18.629 18.629 0 00-2.37 6.49 11.266 11.266 0 01-3.746-2.504 9.754 9.754 0 016.116-3.985z" />
             </svg>
-            <h5>
-                < Explore All>
-            </h5>
-        </div>
+        </div class="">
+                <h5 style="font-size: 1rem">< Explore All ></h5>
+    </div>
     </div>
 </div>
 </x-app-layout>
