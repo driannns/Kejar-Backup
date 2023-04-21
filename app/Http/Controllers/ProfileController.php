@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\File;
 
 class ProfileController extends Controller
 {
@@ -56,5 +57,31 @@ class ProfileController extends Controller
         $request->session()->regenerateToken();
 
         return Redirect::to('/');
+    }
+
+    // Upload Dokumen CV
+    public function document(Request $request)
+    {
+        $user = Auth::User(); 
+        $this->validate(
+            $request,
+            [
+                'dokumen' => 'mimes:pdf'
+            ]
+        );
+
+        $path = 'dokumen/'.$user->cv;
+        if(File::exists($path))
+        {
+            File::delete($path);
+        }
+        $dokumen = $request->file('dokumen');
+        $name = 'CV_' . date('Ymdhis') . '.' . $request->file('dokumen')->getClientOriginalExtension();
+        $dokumen->move('dokumen/', $name);
+
+        $user = Auth::user();
+        $user->cv = $name;
+        $user->update();
+        return Redirect('/profile');
     }
 }

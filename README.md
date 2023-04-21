@@ -1,67 +1,98 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Kejar ( Kerja Belajar )
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Welcome! 👋
 
-## About Laravel
+Hello everyone; we are from the Kejar group.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Kejar itself is a website to help IT graduates find jobs. The KeJar website will provide the latest information about
+available job vacancies in the IT field and assist IT graduates in building profiles and finding appointments that suit their skills
+and expertise. In addition, the KeJar website will also provide resources and information about career opportunities in the IT field
+and assist IT graduates in expanding their professional network. This website can provide significant benefits for IT graduates in
+finding suitable jobs and increasing their success in careers in the IT field.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## The Features & Roles
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Here we describe some of the features contained in the application
 
-## Learning Laravel
+-   Login
+-   Register
+-   Find Job
+-   Logout
+-   Apply Job
+-   CRUD jobs, Profile, Categories
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+And Then we have 3 role
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+-   Admin
+-   Company
+-   Employee
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Tech Stack
 
-## Laravel Sponsors
+we use several tech stacks but here we focus on discussing php more precisely using the laravel framework
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Backend
 
-### Premium Partners
+-   Laravel
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### Front End
 
-## Contributing
+-   Blade
+-   Tailwind Css
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Database
 
-## Code of Conduct
+-   MySql ( Database Relational Model )
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## How To Clone ?
 
-## Security Vulnerabilities
+1. Clone this project using https or ssh
+2. So we are using Laravel Breeze and Tailwind for styling, type the code below
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```
+composer install
+npm install
+```
 
-## License
+3. Copy `.env.example` file to `.env` on the root folder. You can type copy `.env.example .env` if using command prompt Windows or cp `.env.example .env` if using terminal, Ubuntu
+4. adjust the values that are in the `env` file like db name, db username, db password
+5. Set key in `.env` using `php artisan key:generate`
+6. Migrate database using `php artisan migrate`
+7. After everything has been set, the final step is to type the code below
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# Kejar-Backup
+```
+php artisan serve
+npm run dev
+```
+
+## UIUX
+
+1. Register Page
+   ![Design for register](./design/register.png)
+
+2. Login Page
+   ![Design for login](./design/login.png)
+
+3. Dashboard Page
+   ![Design for dashboard](./design/dashboard.png)
+
+4. Find Job Page
+   ![Design for find job](./design/findjob.png)
+
+5. Job Detail Page
+   ![Design for detail job](./design/detailjob.png)
+
+6. Learning Page
+   ![Design for learning](./design/learning.png)
+
+7. Admin Page
+   ![Design for admin](./design/admin.png)
+
+## Team project
+
+-   Muhammad Nurul Afif Maliki - Project Manager & UIUX
+-   Muhammad Rayhan Kurniawan - System Analyst
+-   Alvin Renaldy Novanza - Programmer
+-   Dary Ramadhan Abdussalam - Programmer
+-   Andrian Saputra - Programmer
+-   Nabil Egan Valentino - Programmer
