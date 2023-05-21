@@ -56,9 +56,6 @@
                                     <x-dropdown-link :href="route('profile.edit')">
                                         {{ __('Profile') }}
                                     </x-dropdown-link>
-                                    <x-dropdown-link :href="route('postjob.index')">
-                                        {{ __('Post Job') }}
-                                    </x-dropdown-link>
 
                                     <!-- Authentication -->
                                     <form method="POST" action="{{ route('logout') }}">

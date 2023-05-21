@@ -82,6 +82,6 @@ class ProfileController extends Controller
         $user = Auth::user();
         $user->cv = $name;
         $user->update();
-        return Redirect('/profile');
+        return Redirect('/profile')->with('success', 'Document uploaded successfully');
     }
 }

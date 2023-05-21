@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\ApplyJobController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\JobController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PostJobController;
 use App\Http\Controllers\LearningController;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
     return view('home');
@@ -20,14 +22,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/learning', [LearningController::class, 'index'])->name('learning.index');
 
     // post
-    Route::get('/postjob', [JobController::class, 'job'])->name('postjob.index');
-    Route::get('/postjob-form', [JobController::class, 'postjob'])->name('postjob.postjob');
-    Route::post('/postjob', [JobController::class, 'uploadjob'])->name('postjob.uploadjob');
-    Route::get('/detail-job/{jobid}', [JobController::class, 'detailjob'])->name('detail-job');
-    Route::get('/postjob/{jobid}', [JobController::class, 'updatejob'])->name('update-job');
-    Route::patch('/postjob/{jobid}', [JobController::class, 'updatejobform'])->name('update-job');
-    Route::get('/postjob/delete/{jobid}', [JobController::class, 'deletejob'])->name('delete-job');
+    Route::resource('/postjob', PostJobController::class);
 
+    // apply job
+    Route::post('/apply/{id}', [ApplyJobController::class, 'index'])->name('applyjob');
+    Route::patch('/apply/{id}', [ApplyJobController::class, 'update'])->name('updateApplyJob');
 
     // Profile Route
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
